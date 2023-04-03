@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { NextPage } from "next";
 import MainNav from "~/components/MainNav";
 import {
