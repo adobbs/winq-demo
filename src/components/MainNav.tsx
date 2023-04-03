@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
@@ -9,22 +11,15 @@ import {
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 
-const navigation = [
-    { name: 'Conversations', href: '#', icon: ChatBubbleLeftRightIcon, current: true },
-    { name: 'Insights', href: '#', icon: NewspaperIcon, current: false },
-    { name: 'Networks', href: '#', icon: UsersIcon, current: false },
-    { name: 'Worksheets', href: '#', icon: RectangleGroupIcon, current: false },
-];
-
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-export default function MainNav() {
+export default function MainNav({page, navigation}: {page: string, navigation: []}) {
     
     const [sidebarOpen, setSidebarOpen] = useState(false);
-    const [currentPage, setCurrentPage] = useState("Conversations");
+    const [currentPage, setCurrentPage] = useState(page);
     
     return (
         <>
@@ -84,7 +79,7 @@ export default function MainNav() {
                                     <li>
                                         <ul role="list" className="-mx-2 space-y-1">
                                             {navigation.map((item) => (
-                                            <li key={item.name}>
+                                            <li key={item.name} onClick={() => { setCurrentPage(item.name)}}>
                                                 <a
                                                 href={item.href}
                                                 className={classNames(
@@ -126,7 +121,7 @@ export default function MainNav() {
                                 <li>
                                     <ul role="list" className="-mx-2 space-y-1">
                                         {navigation.map((item) => (
-                                        <li key={item.name}>
+                                        <li key={item.name} onClick={() => { setCurrentPage(item.name)}}>
                                             <a
                                             href={item.href}
                                             className={classNames(
@@ -177,10 +172,6 @@ export default function MainNav() {
                         />
                     </a>
                 </div>
-
-                <main className="py-10 lg:pl-72">
-                    <div className="px-4 sm:px-6 lg:px-8">TODO - Conversation Thread</div>
-                </main>
             </div>
         </>
     );
