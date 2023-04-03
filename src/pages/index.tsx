@@ -28,7 +28,7 @@ const Home: NextPage = () => {
             >
               <h3 className="text-xl sm:text-2xl font-bold">App Demo →</h3>
               <div className="text-normal sm:text-lg">
-                Try out the demo experience (scripted chat and mock data).
+                Try out the demo experience. (mock data, work-in-progress)
               </div>
             </Link>
             <Link

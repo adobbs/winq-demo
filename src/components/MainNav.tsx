@@ -144,7 +144,8 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                 </li>
                                 <li className="-mx-6 mt-auto">
                                     <a
-                                        href="#"
+                                        href="https://www.adobbs.com/"
+                                        target="_blank"
                                         className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-zinc-800"
                                     >
                                     <img
@@ -167,7 +168,7 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                     <div className="flex-1 text-sm font-semibold leading-6 text-white">{currentPage}</div>
-                    <a href="#">
+                    <a href="https://www.adobbs.com/" target="_blank">
                         <span className="sr-only">Your profile</span>
                         <img
                         className="h-8 w-8 rounded-full bg-zinc-800"
