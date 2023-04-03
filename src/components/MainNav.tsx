@@ -4,10 +4,6 @@ import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import {
     Bars3Icon,
-    ChatBubbleLeftRightIcon,
-    NewspaperIcon,
-    RectangleGroupIcon,
-    UsersIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 
