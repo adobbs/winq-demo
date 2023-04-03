@@ -2,7 +2,7 @@
 
 An AI assistant that helps you get a job. (Instead of replacing yours.)
 
-Try out the [app demo](https://www.winq.dev/). This is a work in progress prototype that I am actively developing and designing right now.
+Try out the [app demo](https://www.winq.dev/). This is a work in progress prototype that I am actively developing and designing.
 
 ## Technologies
 
