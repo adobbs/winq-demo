@@ -10,7 +10,17 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ');
 }
 
-export default function MainNav({page, navigation}: {page: string, navigation: []}) {
+interface Navigation {
+    name: string;
+    href: string;
+    icon: React.ForwardRefExoticComponent<Omit<React.SVGProps<SVGSVGElement>, "ref"> & {
+        title?: string;
+        titleId?: string;
+    } & React.RefAttributes<SVGSVGElement>>;
+    current: boolean;
+}
+
+export default function MainNav({page, navigation}: {page: string, navigation: Navigation[]}) {
     
     const [sidebarOpen, setSidebarOpen] = useState(false);
     const [currentPage, setCurrentPage] = useState(page);

@@ -17,7 +17,7 @@ const networksNav = [
 const Networks: NextPage = () => {
     return (
         <>
-            <MainNav page={networksNav[2].name} navigation={networksNav} />
+            <MainNav page="Networks" navigation={networksNav} />
             <main className="py-10 lg:pl-72">
                 <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Network Graph</div>
             </main>

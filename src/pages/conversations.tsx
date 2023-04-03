@@ -17,7 +17,7 @@ const conversationsNav = [
 const Conversations: NextPage = () => {
     return (
         <>
-            <MainNav page={conversationsNav[0].name} navigation={conversationsNav} />
+            <MainNav page="Conversations" navigation={conversationsNav} />
             <main className="py-10 lg:pl-72">
                 <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Conversation Thread</div>
             </main>

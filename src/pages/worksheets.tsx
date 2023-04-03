@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 import { NextPage } from "next";
 import MainNav from "~/components/MainNav";
 import {
@@ -19,7 +17,7 @@ const worksheetsNav = [
 const Worksheets: NextPage = () => {
     return (
         <>
-            <MainNav page={worksheetsNav[3].name} navigation={worksheetsNav} />
+            <MainNav page="Worksheets" navigation={worksheetsNav} />
             <main className="py-10 lg:pl-72">
                 <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Worksheet Canvas</div>
             </main>

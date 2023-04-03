@@ -17,7 +17,7 @@ const insightsNav = [
 const Insights: NextPage = () => {
     return (
         <>
-            <MainNav page={insightsNav[1].name} navigation={insightsNav} />
+            <MainNav page="Insights" navigation={insightsNav} />
             <main className="py-10 lg:pl-72">
                 <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Insight Brief</div>
             </main>
