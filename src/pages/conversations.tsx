@@ -6,6 +6,7 @@ import {
     RectangleGroupIcon,
     UsersIcon,
 } from '@heroicons/react/24/outline'
+import ChatThread from "~/components/ChatThread";
 
 const conversationsNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: true },
@@ -18,9 +19,7 @@ const Conversations: NextPage = () => {
     return (
         <>
             <MainNav page="Conversations" navigation={conversationsNav} />
-            <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Conversation Thread</div>
-            </main>
+            <ChatThread />
         </>
     );
 };
