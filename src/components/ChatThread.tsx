@@ -1,10 +1,18 @@
+import ChatInput from "./ChatInput";
+
 const chatMessages = [
     { id: 1, isAuthorUser: false, content: "TODO - Bot Content" },
     { id: 2, isAuthorUser: true, content: "TODO - User Content" },
     { id: 3, isAuthorUser: false, content: "TODO - Bot Content" },
     { id: 4, isAuthorUser: true, content: "TODO - User Content" },
     { id: 5, isAuthorUser: false, content: "TODO - Bot Content" },
-    { id: 6, isAuthorUser: false, content: "TODO - Bot Content" },
+    // { id: 6, isAuthorUser: false, content: "TODO - Bot Content" },
+    // { id: 7, isAuthorUser: false, content: "TODO - Bot Content" },
+    // { id: 8, isAuthorUser: true, content: "TODO - User Content" },
+    // { id: 9, isAuthorUser: false, content: "TODO - Bot Content" },
+    // { id: 10, isAuthorUser: true, content: "TODO - User Content" },
+    // { id: 11, isAuthorUser: false, content: "TODO - Bot Content" },
+    // { id: 12, isAuthorUser: false, content: "TODO - Bot Content" },
 ];
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
@@ -15,8 +23,8 @@ function classNames(...classes: string[]) {
 export default function ChatThread() {
     return (
         <>
-            <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-white">
+            <main className="flex flex-col lg:h-screen lg:pl-72">
+                <div className="py-10 px-4 sm:px-6 lg:px-8 text-white">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <li key={message.id}
@@ -31,6 +39,9 @@ export default function ChatThread() {
                             </li>
                         ))}
                     </ul>
+                </div>
+                <div className="sticky bottom-4 mt-auto self-center w-4/6">
+                    <ChatInput />
                 </div>
             </main>
         </>
