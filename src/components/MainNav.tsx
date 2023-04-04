@@ -4,6 +4,7 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
 function classNames(...classes: string[]) {
@@ -72,13 +73,13 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                             {/* Sidebar component */}
                             <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6 pb-2 ring-1 ring-white/10">
                                 <div className="flex h-16 shrink-0 items-center">
-                                    <a href="/">
+                                    <Link href="/">
                                     <img
                                         className="h-8 w-auto"
                                         src="/winq-logo-sm.svg"
                                         alt="Winq logo"
                                     />
-                                    </a>
+                                    </Link>
                                 </div>
                                 <nav className="flex flex-1 flex-col">
                                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -116,13 +117,13 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                     {/* Sidebar component */}
                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6">
                         <div className="flex h-16 shrink-0 items-center">
-                            <a href="/">
+                            <Link href="/">
                             <img
                                 className="h-8 w-auto"
                                 src="/winq-logo-sm.svg"
                                 alt="Winq logo"
                             />
-                            </a>
+                            </Link>
                         </div>
                         <nav className="flex flex-1 flex-col">
                             <ul role="list" className="flex flex-1 flex-col gap-y-7">
