@@ -4,6 +4,7 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
 function classNames(...classes: string[]) {
@@ -69,14 +70,16 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                 </button>
                                 </div>
                             </Transition.Child>
-                            {/* Sidebar component, swap this element with another sidebar if you like */}
+                            {/* Sidebar component */}
                             <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6 pb-2 ring-1 ring-white/10">
                                 <div className="flex h-16 shrink-0 items-center">
+                                    <Link href="/">
                                     <img
                                         className="h-8 w-auto"
                                         src="/winq-logo-sm.svg"
                                         alt="Winq logo"
                                     />
+                                    </Link>
                                 </div>
                                 <nav className="flex flex-1 flex-col">
                                 <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -111,14 +114,16 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
 
                 {/* Static sidebar for desktop */}
                 <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
-                    {/* Sidebar component, swap this element with another sidebar if you like */}
+                    {/* Sidebar component */}
                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6">
                         <div className="flex h-16 shrink-0 items-center">
+                            <Link href="/">
                             <img
                                 className="h-8 w-auto"
                                 src="/winq-logo-sm.svg"
                                 alt="Winq logo"
                             />
+                            </Link>
                         </div>
                         <nav className="flex flex-1 flex-col">
                             <ul role="list" className="flex flex-1 flex-col gap-y-7">
