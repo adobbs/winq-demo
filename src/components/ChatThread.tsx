@@ -5,14 +5,11 @@ import ChatInput from "./ChatInput";
 // TODO: Navigating to prior conversations
 
 const emojiWink = <span>&#128521;</span>;
-const emojiWave = <span>&#128075;</span>;
 const emojiDisappointed = <span>&#128533;</span>;
-const emojiParty = <span>&#127881;</span>;
 const emojiNerd = <span>&#129299;</span>;
 const emojiCool = <span>&#128526;</span>;
 const emojiSlightSmile = <span>&#128578;</span>;
 const emojiThumbsUp = <span>&#128077;</span>;
-const emojiPointingDown = <span>&#128071;</span>;
 
 const emojiWaveText = "&#128075;"
 const emojiPointingDownText = "&#128071;";
@@ -42,7 +39,8 @@ export default function ChatThread() {
                 <div className="py-10 px-2 sm:px-4 lg:px-6 mt-16 lg:mt-0 text-purple-950">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
-                            <div className="flex flex-row gap-2 items-center">
+                            <div key={message.id}
+                                className="flex flex-row gap-2 items-center">
                                 <span key={message.id}
                                 className={classNames(
                                     message.isAuthorUser
