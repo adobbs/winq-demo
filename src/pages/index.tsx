@@ -18,7 +18,7 @@ const Home: NextPage = () => {
             </h1>
             <div className="flex flex-col items-center gap-1 sm:gap-2">
               <div className="text-normal sm:text-2xl font-semibold text-white">An AI assistant that helps you get a job.</div>
-              <div className="text-normal sm:text-xl font-light text-zinc-200">(Instead of replacing yours.)</div>
+              <div className="text-normal sm:text-xl font-light text-neutral-200">(Instead of replacing yours.)</div>
             </div>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
