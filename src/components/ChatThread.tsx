@@ -1,5 +1,11 @@
 import ChatInput from "./ChatInput";
 
+// TODO: ?Change bot content to only use faces outside bubbles and other emoji inside
+// TODO: ?Conditionally displaying chat carets and emoji
+// TODO: ?Dynamically color chat carets
+// TODO: Convert to subcomponents
+// TODO: Navigating to prior conversations
+
 const emojiWave = <span>&#128075;</span>;
 const emojiDisappointed = <span>&#128533;</span>;
 const emojiParty = <span>&#127881;</span>
@@ -43,16 +49,36 @@ export default function ChatThread() {
                                 >
                                     {message.emoji}
                                 </span>
+                                <svg 
+                                    className={classNames(
+                                        message.isAuthorUser
+                                        ? "hidden"
+                                        : "",
+                                        "h-4 w-4 -ml-1 -mr-3"
+                                    )}
+                                >
+                                    <polygon points="16,0 4,8 16,16" fill="rgb(253 242 248)" />
+                                </svg>
                                 <li key={message.id}
                                     className={classNames(
                                         message.isAuthorUser
                                         ? "bg-neutral-50 w-fit ml-auto"
                                         : "bg-pink-50 w-fit mr-auto",
-                                        "px-4 py-4 rounded-full sm:px-6"
+                                        "relative px-4 py-4 rounded-full sm:px-6"
                                     )}
                                 >
                                     {message.content}
                                 </li>
+                                <svg 
+                                    className={classNames(
+                                        message.isAuthorUser
+                                        ? ""
+                                        : "hidden",
+                                        "h-4 w-4 -mr-1 -ml-3"
+                                    )}
+                                >
+                                    <polygon points="0,0 12,8 0,16" fill="white" />
+                                </svg>
                                 <img
                                 className={classNames(
                                     message.isAuthorUser
@@ -66,7 +92,6 @@ export default function ChatThread() {
                             </div>
                         ))}
                     </ul>
-                    {/* <div className="mt-12">TODO - Chat avatars and bubble style tweaks</div> */}
                 </div>
                 <div className="sticky bottom-4 mt-auto self-center w-full md:w-4/6 px-2 sm:px-4 md:px-0">
                     <ChatInput />
