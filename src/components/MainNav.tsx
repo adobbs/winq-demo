@@ -71,14 +71,10 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                 </div>
                             </Transition.Child>
                             {/* Sidebar component */}
-                            <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6 pb-2 ring-1 ring-white/10">
+                            <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-purple-800 px-6 pb-2 ring-1 ring-white/10">
                                 <div className="flex h-16 shrink-0 items-center">
                                     <Link href="/">
-                                    <img
-                                        className="h-8 w-auto"
-                                        src="/winq-logo-sm.svg"
-                                        alt="Winq logo"
-                                    />
+                                    <span className="text-2xl text-white">&#128521; Winq</span>
                                     </Link>
                                 </div>
                                 <nav className="flex flex-1 flex-col">
@@ -91,8 +87,8 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                                 href={item.href}
                                                 className={classNames(
                                                     item.current
-                                                    ? 'bg-zinc-800 text-white'
-                                                    : 'text-zinc-400 hover:text-white hover:bg-zinc-800',
+                                                    ? 'bg-pink-900 text-white'
+                                                    : 'text-neutral-100 hover:text-white hover:bg-pink-800',
                                                     'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                                 )}
                                                 >
@@ -115,14 +111,10 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                 {/* Static sidebar for desktop */}
                 <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
                     {/* Sidebar component */}
-                    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-zinc-900 px-6">
+                    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-purple-800 px-6">
                         <div className="flex h-16 shrink-0 items-center">
                             <Link href="/">
-                            <img
-                                className="h-8 w-auto"
-                                src="/winq-logo-sm.svg"
-                                alt="Winq logo"
-                            />
+                            <span className="text-2xl text-white">&#128521; Winq</span>
                             </Link>
                         </div>
                         <nav className="flex flex-1 flex-col">
@@ -135,8 +127,8 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                             href={item.href}
                                             className={classNames(
                                                 item.current
-                                                ? 'bg-zinc-800 text-white'
-                                                : 'text-zinc-400 hover:text-white hover:bg-zinc-800',
+                                                ? 'bg-pink-900 text-white'
+                                                : 'text-neutral-100 hover:text-white hover:bg-pink-800',
                                                 'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
                                             )}
                                             >
@@ -167,8 +159,8 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                     </div>
                 </div>
 
-                <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-zinc-900 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-                    <button type="button" className="-m-2.5 p-2.5 text-zinc-400 lg:hidden" onClick={() => setSidebarOpen(true)}>
+                <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-purple-800 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
+                    <button type="button" className="-m-2.5 p-2.5 text-neutral-100 lg:hidden" onClick={() => setSidebarOpen(true)}>
                         <span className="sr-only">Open sidebar</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
@@ -176,7 +168,7 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                     <a href="https://www.adobbs.com/" target="_blank">
                         <span className="sr-only">Your profile</span>
                         <img
-                        className="h-8 w-8 rounded-full bg-zinc-800"
+                        className="h-8 w-8 rounded-full bg-purple-800"
                         src="/headshot.png"
                         alt="Profile photo"
                         />

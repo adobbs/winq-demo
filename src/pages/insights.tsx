@@ -19,7 +19,7 @@ const Insights: NextPage = () => {
         <>
             <MainNav page="Insights" navigation={insightsNav} />
             <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Insight Brief</div>
+                <div className="px-4 sm:px-6 lg:px-8 text-purple-950">TODO - Insight Brief</div>
             </main>
         </>
     );
