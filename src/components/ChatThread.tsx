@@ -12,19 +12,22 @@ const emojiNerd = <span>&#129299;</span>;
 const emojiCool = <span>&#128526;</span>;
 const emojiSlightSmile = <span>&#128578;</span>;
 const emojiThumbsUp = <span>&#128077;</span>;
-// const emojiPointingRight = <span>&#128073;</span>;
 const emojiPointingDown = <span>&#128071;</span>;
 
+const emojiWaveText = "&#128075;"
+const emojiPointingDownText = "&#128071;";
+const emojiPartyText = "&#127881;";
+
 const chatMessages = [
-    { id: 1, isAuthorUser: false, emoji: emojiWink, content: `${emojiWave.props.children} Hi Andy, can I help you with your career today?` },
+    { id: 1, isAuthorUser: false, emoji: emojiWink, content: `${emojiWaveText} Hi Andy, can I help you with your career today?` },
     { id: 2, isAuthorUser: true, emoji: null, content: "Hey Winq. I just got laid off. What jobs are out there?" },
     { id: 3, isAuthorUser: false, emoji: emojiDisappointed, content: "Yikes, sorry to hear that. Are you looking for a similar role?" },
     { id: 4, isAuthorUser: true, emoji: null, content: "Yes." },
-    { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, content: `Here is a list of similar jobs. ${emojiPointingDown.props.children} ` },
+    { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, content: `Here is a list of similar jobs. ${emojiPointingDownText} ` },
     { id: 6, isAuthorUser: false, emoji: null, content: "TODO - job list with expand button or pagination" },
     { id: 7, isAuthorUser: false, emoji: emojiNerd, content: "I've saved this list to your worksheets. Want me to reach out on your behalf?" },
     { id: 8, isAuthorUser: true, emoji: null, content: emojiThumbsUp },
-    { id: 9, isAuthorUser: false, emoji: emojiCool, content: `${emojiParty.props.children} Great! Anything else?` },
+    { id: 9, isAuthorUser: false, emoji: emojiCool, content: `${emojiPartyText} Great! Anything else?` },
 ];
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
@@ -40,7 +43,7 @@ export default function ChatThread() {
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <div className="flex flex-row gap-2 items-center">
-                                <span
+                                <span key={message.id}
                                 className={classNames(
                                     message.isAuthorUser
                                     ? "hidden"
@@ -50,7 +53,7 @@ export default function ChatThread() {
                                 >
                                     {message.emoji}
                                 </span>
-                                <svg 
+                                <svg key={message.id}
                                     className={classNames(
                                         message.isAuthorUser || !message.emoji
                                         ? "hidden"
@@ -73,7 +76,7 @@ export default function ChatThread() {
                                 >
                                     {message.content}
                                 </li>
-                                <svg 
+                                <svg key={message.id}
                                     className={classNames(
                                         message.isAuthorUser
                                         ? ""
@@ -83,7 +86,7 @@ export default function ChatThread() {
                                 >
                                     <polygon points="0,0 12,8 0,16" fill="white" />
                                 </svg>
-                                <img
+                                <img key={message.id}
                                 className={classNames(
                                     message.isAuthorUser
                                     ? ""
