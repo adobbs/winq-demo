@@ -1,18 +1,15 @@
 import ChatInput from "./ChatInput";
 
 const chatMessages = [
-    { id: 1, isAuthorUser: false, content: "TODO - Bot Content" },
-    { id: 2, isAuthorUser: true, content: "TODO - User Content" },
-    { id: 3, isAuthorUser: false, content: "TODO - Bot Content" },
-    { id: 4, isAuthorUser: true, content: "TODO - User Content" },
-    { id: 5, isAuthorUser: false, content: "TODO - Bot Content" },
-    // { id: 6, isAuthorUser: false, content: "TODO - Bot Content" },
-    // { id: 7, isAuthorUser: false, content: "TODO - Bot Content" },
-    // { id: 8, isAuthorUser: true, content: "TODO - User Content" },
-    // { id: 9, isAuthorUser: false, content: "TODO - Bot Content" },
-    // { id: 10, isAuthorUser: true, content: "TODO - User Content" },
-    // { id: 11, isAuthorUser: false, content: "TODO - Bot Content" },
-    // { id: 12, isAuthorUser: false, content: "TODO - Bot Content" },
+    { id: 1, isAuthorUser: false, content: "Hi Andy, can I help you with your career today?" },
+    { id: 2, isAuthorUser: true, content: "Hey Winq. I just got laid off. What jobs are out there?" },
+    { id: 3, isAuthorUser: false, content: "Yikes, sorry to hear that. Are you looking for a similar role?" },
+    { id: 4, isAuthorUser: true, content: "Yes." },
+    { id: 5, isAuthorUser: false, content: "Here is a list of similar jobs:" },
+    { id: 6, isAuthorUser: false, content: "TODO - job list with expand button or pagination" },
+    { id: 7, isAuthorUser: false, content: "I've saved this list to your worksheets. Want me to alert you when there are updates?" },
+    { id: 8, isAuthorUser: true, content: "Sure." },
+    { id: 9, isAuthorUser: false, content: "Anything else?" },
 ];
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
@@ -24,7 +21,7 @@ export default function ChatThread() {
     return (
         <>
             <main className="flex flex-col lg:h-screen lg:pl-72">
-                <div className="py-10 px-4 sm:px-6 lg:px-8 text-purple-950">
+                <div className="py-10 px-1 sm:px-4 xl:px-6 text-purple-950">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <li key={message.id}
@@ -39,6 +36,7 @@ export default function ChatThread() {
                             </li>
                         ))}
                     </ul>
+                    {/* <div className="mt-12">TODO - Chat avatars and bubble style tweaks</div> */}
                 </div>
                 <div className="sticky bottom-4 mt-auto self-center w-4/6">
                     <ChatInput />
