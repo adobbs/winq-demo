@@ -19,7 +19,7 @@ const Networks: NextPage = () => {
         <>
             <MainNav page="Networks" navigation={networksNav} />
             <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Network Graph</div>
+                <div className="px-4 sm:px-6 lg:px-8 text-purple-950">TODO - Network Graph</div>
             </main>
         </>
     );

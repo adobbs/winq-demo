@@ -24,14 +24,14 @@ export default function ChatThread() {
     return (
         <>
             <main className="flex flex-col lg:h-screen lg:pl-72">
-                <div className="py-10 px-4 sm:px-6 lg:px-8 text-white">
+                <div className="py-10 px-4 sm:px-6 lg:px-8 text-purple-950">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <li key={message.id}
                                 className={classNames(
                                     message.isAuthorUser
-                                    ? "bg-blue-900 ml-16 mr-4 sm:ml-48 md:ml-64"
-                                    : "bg-zinc-900 ml-4 mr-16 sm:mr-48 md:mr-64",
+                                    ? "bg-neutral-50 ml-16 mr-4 sm:ml-48 md:ml-64"
+                                    : "bg-pink-50 ml-4 mr-16 sm:mr-48 md:mr-64",
                                     "overflow-hidden px-4 py-4 rounded-full sm:px-6"
                                 )}
                             >

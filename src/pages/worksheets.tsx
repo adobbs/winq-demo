@@ -19,7 +19,7 @@ const Worksheets: NextPage = () => {
         <>
             <MainNav page="Worksheets" navigation={worksheetsNav} />
             <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-white">TODO - Worksheet Canvas</div>
+                <div className="px-4 sm:px-6 lg:px-8 text-purple-950">TODO - Worksheet Canvas</div>
             </main>
         </>
     );
