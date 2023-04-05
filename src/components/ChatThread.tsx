@@ -1,29 +1,30 @@
 import ChatInput from "./ChatInput";
 
-// TODO: ?Change bot content to only use faces outside bubbles and other emoji inside
-// TODO: ?Conditionally displaying chat carets and emoji
 // TODO: ?Dynamically color chat carets
 // TODO: Convert to subcomponents
 // TODO: Navigating to prior conversations
 
+const emojiWink = <span>&#128521;</span>;
 const emojiWave = <span>&#128075;</span>;
 const emojiDisappointed = <span>&#128533;</span>;
-const emojiParty = <span>&#127881;</span>
-const emojiNerd = <span>&#129299;</span>
-const emojiSlightSmile = <span>&#128578;</span>
-const emojiThumbsUp = <span>&#128077;</span>
-const emojiPointingRight = <span>&#128073;</span>
+const emojiParty = <span>&#127881;</span>;
+const emojiNerd = <span>&#129299;</span>;
+const emojiCool = <span>&#128526;</span>;
+const emojiSlightSmile = <span>&#128578;</span>;
+const emojiThumbsUp = <span>&#128077;</span>;
+// const emojiPointingRight = <span>&#128073;</span>;
+const emojiPointingDown = <span>&#128071;</span>;
 
 const chatMessages = [
-    { id: 1, isAuthorUser: false, emoji: emojiWave, content: "Hi Andy, can I help you with your career today?" },
+    { id: 1, isAuthorUser: false, emoji: emojiWink, content: `${emojiWave.props.children} Hi Andy, can I help you with your career today?` },
     { id: 2, isAuthorUser: true, emoji: null, content: "Hey Winq. I just got laid off. What jobs are out there?" },
     { id: 3, isAuthorUser: false, emoji: emojiDisappointed, content: "Yikes, sorry to hear that. Are you looking for a similar role?" },
     { id: 4, isAuthorUser: true, emoji: null, content: "Yes." },
-    { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, content: "Here is a list of similar jobs:" },
-    { id: 6, isAuthorUser: false, emoji: emojiPointingRight, content: "TODO - job list with expand button or pagination" },
+    { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, content: `Here is a list of similar jobs. ${emojiPointingDown.props.children} ` },
+    { id: 6, isAuthorUser: false, emoji: null, content: "TODO - job list with expand button or pagination" },
     { id: 7, isAuthorUser: false, emoji: emojiNerd, content: "I've saved this list to your worksheets. Want me to reach out on your behalf?" },
     { id: 8, isAuthorUser: true, emoji: null, content: emojiThumbsUp },
-    { id: 9, isAuthorUser: false, emoji: emojiParty, content: "Great! Anything else?" },
+    { id: 9, isAuthorUser: false, emoji: emojiCool, content: `${emojiParty.props.children} Great! Anything else?` },
 ];
 
 // Filter out null and undefined values - https://www.skillthrive.com/hunter/snippets/combine-css-classes
@@ -51,7 +52,7 @@ export default function ChatThread() {
                                 </span>
                                 <svg 
                                     className={classNames(
-                                        message.isAuthorUser
+                                        message.isAuthorUser || !message.emoji
                                         ? "hidden"
                                         : "",
                                         "h-4 w-4 -ml-1 -mr-3"
@@ -64,6 +65,9 @@ export default function ChatThread() {
                                         message.isAuthorUser
                                         ? "bg-neutral-50 w-fit ml-auto"
                                         : "bg-pink-50 w-fit mr-auto",
+                                        !message.isAuthorUser && !message.emoji
+                                        ? "ml-2"
+                                        : "",
                                         "relative px-4 py-4 rounded-full sm:px-6"
                                     )}
                                 >
