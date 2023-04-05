@@ -143,10 +143,10 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                     <a
                                         href="https://www.adobbs.com/"
                                         target="_blank"
-                                        className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-zinc-800"
+                                        className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-pink-800"
                                     >
                                     <img
-                                    className="h-8 w-8 rounded-full bg-zinc-800"
+                                    className="h-8 w-8 rounded-full bg-purple-800"
                                     src="/headshot.png"
                                     alt="Profile photo"
                                     />
