@@ -20,8 +20,8 @@ function classNames(...classes: string[]) {
 export default function ChatThread() {
     return (
         <>
-            <main className="flex flex-col max-w-screen-xl lg:h-screen lg:pl-72">
-                <div className="py-10 px-2 sm:px-4 text-purple-950">
+            <main className="flex flex-col max-w-screen-xl h-screen -mt-16 lg:mt-0 lg:pl-72">
+                <div className="py-10 px-2 sm:px-4 mt-16 lg:mt-0 text-purple-950">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <li key={message.id}
