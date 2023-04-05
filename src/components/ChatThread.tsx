@@ -11,9 +11,9 @@ const emojiCool = <span>&#128526;</span>;
 const emojiSlightSmile = <span>&#128578;</span>;
 const emojiThumbsUp = <span>&#128077;</span>;
 
-const emojiWaveText = "&#128075;"
-const emojiPointingDownText = "&#128071;";
-const emojiPartyText = "&#127881;";
+const emojiWaveText = String.fromCodePoint(128075);
+const emojiPointingDownText = String.fromCodePoint(128071);
+const emojiPartyText = String.fromCodePoint(127881);
 
 const chatMessages = [
     { id: 1, isAuthorUser: false, emoji: emojiWink, content: `${emojiWaveText} Hi Andy, can I help you with your career today?` },
