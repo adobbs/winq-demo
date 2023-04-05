@@ -21,14 +21,14 @@ export default function ChatThread() {
     return (
         <>
             <main className="flex flex-col max-w-screen-xl lg:h-screen lg:pl-72">
-                <div className="py-10 px-1 sm:px-4 text-purple-950">
+                <div className="py-10 px-2 sm:px-4 text-purple-950">
                     <ul role="list" className="space-y-3">
                         {chatMessages.map((message) => (
                             <li key={message.id}
                                 className={classNames(
                                     message.isAuthorUser
-                                    ? "bg-neutral-50 w-fit ml-auto mr-4"
-                                    : "bg-pink-50 w-fit ml-4 mr-auto",
+                                    ? "bg-neutral-50 w-fit ml-auto mr-0 md:mr-4"
+                                    : "bg-pink-50 w-fit ml-0 md:ml-4 mr-auto",
                                     "overflow-hidden px-4 py-4 rounded-full sm:px-6"
                                 )}
                             >
@@ -38,7 +38,7 @@ export default function ChatThread() {
                     </ul>
                     {/* <div className="mt-12">TODO - Chat avatars and bubble style tweaks</div> */}
                 </div>
-                <div className="sticky bottom-4 mt-auto self-center w-4/6">
+                <div className="sticky bottom-4 mt-auto self-center w-full md:w-4/6 px-2 sm:px-4 md:px-0">
                     <ChatInput />
                 </div>
             </main>

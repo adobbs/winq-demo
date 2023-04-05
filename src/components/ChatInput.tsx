@@ -1,7 +1,7 @@
 export default function ChatInput() {
     return (
         <>
-            <div className="mt-2 flex rounded-md shadow-sm">
+            <div className="flex rounded-md shadow-sm">
                 <div className="relative flex flex-grow items-stretch focus-within:z-10">
                     <input 
                         type="text"
