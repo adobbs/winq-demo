@@ -1,3 +1,7 @@
+import AutomationSelect from "./AutomationSelect";
+
+// TODO: More info
+
 interface Contact {
     name: string;
     imageUrl: string;
@@ -22,13 +26,11 @@ export default function JobListItem({ jobTitle, companyName, contacts }: Jobs) {
                     </p>
                 </div>
             </div>
-            <div className="mt-2 sm:flex sm:justify-between">
-                <div className="sm:flex">
-                    <p className="flex items-center text-sm text-purple-800">
-                        {companyName}
-                    </p>
-                </div>
-                <div className="mt-4 flex-shrink-0 sm:ml-5 sm:mt-0">
+            <div className="mt-2 flex items-center justify-between">
+                <p className="truncate text-sm text-purple-800">
+                    {companyName}
+                </p>
+                <div className="ml-2 flex flex-shrink-0 sm:ml-5 sm:mt-0">
                     <button className="text-sm underline text-neutral-500">more info</button>
                     {/* <div className="flex -space-x-1 overflow-hidden">
                       {contacts.map((contact) => (
@@ -41,6 +43,9 @@ export default function JobListItem({ jobTitle, companyName, contacts }: Jobs) {
                       ))}
                     </div> */}
                 </div>
+            </div>
+            <div>
+                <AutomationSelect />
             </div>
         </div>
     );

@@ -1,5 +1,7 @@
 import JobListItem from "./JobListItem";
 
+//TODO: Move actions to bottom bar - request new list, done, cancel
+
 const jobs = [
     {id: 1, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health", 
         contacts: [{
@@ -44,7 +46,7 @@ export default function JobList() {
                             Identify jobs that match and choose next steps.
                         </p>
                     </div>
-                    <div className="ml-4 mt-4 flex-shrink-0">
+                    <div className="ml-4 sm:ml-8 mt-4 flex-shrink-0">
                         <button type="button"
                             className="relative inline-flex items-center rounded-md bg-pink-900 px-3 py-2 text-sm font-semibold text-white
                             hover:bg-pink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
