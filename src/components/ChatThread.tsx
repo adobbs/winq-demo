@@ -1,6 +1,8 @@
 import ChatInput from "./ChatInput";
+import JobList from "./JobList";
 
 // TODO: ?Dynamically color chat carets
+// TODO: Job List content and layout, chatMessage types
 // TODO: Convert to subcomponents
 // TODO: Navigating to prior conversations
 
@@ -15,13 +17,15 @@ const emojiWaveText = String.fromCodePoint(128075);
 const emojiPointingDownText = String.fromCodePoint(128071);
 const emojiPartyText = String.fromCodePoint(127881);
 
+const jobList = <JobList />;
+
 const chatMessages = [
     { id: 1, isAuthorUser: false, emoji: emojiWink, content: `${emojiWaveText} Hi Andy, can I help you with your career today?` },
     { id: 2, isAuthorUser: true, emoji: null, content: "Hey Winq. I just got laid off. What jobs are out there?" },
     { id: 3, isAuthorUser: false, emoji: emojiDisappointed, content: "Yikes, sorry to hear that. Are you looking for a similar role?" },
     { id: 4, isAuthorUser: true, emoji: null, content: "Yes." },
     { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, content: `Here is a list of similar jobs. ${emojiPointingDownText} ` },
-    { id: 6, isAuthorUser: false, emoji: null, content: "TODO - job list with expand button or pagination" },
+    { id: 6, isAuthorUser: false, emoji: null, content: jobList },
     { id: 7, isAuthorUser: false, emoji: emojiNerd, content: "I've saved this list to your worksheets. Want me to reach out on your behalf?" },
     { id: 8, isAuthorUser: true, emoji: null, content: emojiThumbsUp },
     { id: 9, isAuthorUser: false, emoji: emojiCool, content: `${emojiPartyText} Great! Anything else?` },
