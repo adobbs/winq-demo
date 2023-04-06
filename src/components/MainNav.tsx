@@ -64,7 +64,10 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                 leaveTo="opacity-0"
                             >
                                 <div className="absolute left-full top-0 flex w-16 justify-center pt-5">
-                                <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
+                                <button type="button" 
+                                    className="-m-2.5 p-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800" 
+                                    onClick={() => setSidebarOpen(false)}
+                                >
                                     <span className="sr-only">Close sidebar</span>
                                     <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
                                 </button>
@@ -73,7 +76,9 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                             {/* Sidebar component */}
                             <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-purple-800 px-6 pb-2 ring-1 ring-white/10">
                                 <div className="flex h-16 shrink-0 items-center">
-                                    <Link href="/">
+                                    <Link href="/"
+                                        className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+                                    >
                                     <span className="text-2xl text-white">&#128521; Winq</span>
                                     </Link>
                                 </div>
@@ -89,7 +94,7 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                                     item.current
                                                     ? 'bg-pink-900 text-white'
                                                     : 'text-neutral-100 hover:text-white hover:bg-pink-800',
-                                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                                    'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800'
                                                 )}
                                                 >
                                                 <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -113,7 +118,9 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                     {/* Sidebar component */}
                     <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-purple-800 px-6">
                         <div className="flex h-16 shrink-0 items-center">
-                            <Link href="/">
+                            <Link href="/"
+                                className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+                            >
                             <span className="text-2xl text-white">&#128521; Winq</span>
                             </Link>
                         </div>
@@ -129,7 +136,7 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                                 item.current
                                                 ? 'bg-pink-900 text-white'
                                                 : 'text-neutral-100 hover:text-white hover:bg-pink-800',
-                                                'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                                                'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800'
                                             )}
                                             >
                                             <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
@@ -143,16 +150,16 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                                     <a
                                         href="https://www.adobbs.com/"
                                         target="_blank"
-                                        className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-pink-800"
-                                    >
-                                    <img
-                                    className="h-8 w-8 rounded-full bg-purple-800"
-                                    src="/headshot.png"
-                                    alt="Profile photo"
-                                    />
-                                    <span className="sr-only">Your profile</span>
-                                    <span aria-hidden="true">Andy Dobbs</span>
-                                </a>
+                                        className="flex items-center gap-x-4 px-6 py-3 text-sm font-semibold leading-6 text-white hover:bg-pink-800 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-pink-800 focus-visible:outline focus-visible:outline-transparent"
+                                    > 
+                                        <img
+                                        className="h-8 w-8 rounded-full bg-purple-800"
+                                        src="/headshot.png"
+                                        alt="Profile photo"
+                                        />
+                                        <span className="sr-only">Your profile</span>
+                                        <span aria-hidden="true">Andy Dobbs</span>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
@@ -160,12 +167,17 @@ export default function MainNav({page, navigation}: {page: string, navigation: N
                 </div>
 
                 <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-purple-800 px-4 py-4 shadow-sm sm:px-6 lg:hidden">
-                    <button type="button" className="-m-2.5 p-2.5 text-neutral-100 lg:hidden" onClick={() => setSidebarOpen(true)}>
+                    <button type="button" 
+                        className="-m-2.5 p-2.5 text-neutral-100 lg:hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800" 
+                        onClick={() => setSidebarOpen(true)}
+                    >
                         <span className="sr-only">Open sidebar</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                     <div className="flex-1 text-sm font-semibold leading-6 text-white">{currentPage}</div>
-                    <a href="https://www.adobbs.com/" target="_blank">
+                    <a href="https://www.adobbs.com/" target="_blank"
+                        className="focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
+                    >
                         <span className="sr-only">Your profile</span>
                         <img
                         className="h-8 w-8 rounded-full bg-purple-800"
