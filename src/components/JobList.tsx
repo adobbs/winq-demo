@@ -21,18 +21,6 @@ const jobs = [
             imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         }]
     },
-    {id: 4, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health",
-        contacts: [{
-            name: "Jamie Anderson",
-            imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        }]
-    },
-    {id: 5, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health",
-        contacts: [{
-            name: "Jamie Anderson",
-            imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-        }]
-    },
 ];
 
 export default function JobList() {
@@ -46,14 +34,14 @@ export default function JobList() {
                             Identify jobs that match and choose next steps.
                         </p>
                     </div>
-                    <div className="ml-4 sm:ml-8 mt-4 flex-shrink-0">
+                    {/* <div className="ml-4 sm:ml-8 mt-4 flex-shrink-0">
                         <button type="button"
                             className="relative inline-flex items-center rounded-md bg-pink-900 px-3 py-2 text-sm font-semibold text-white
                             hover:bg-pink-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-800"
                         >
                             Request new list
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
             <ul role="list" className="divide-y divide-neutral-200 bg-white">
