@@ -74,10 +74,10 @@ export default function ChatThread() {
                                         !message.isAuthorUser && !message.emoji
                                         ? "ml-2"
                                         : "",
-                                        "relative px-4 py-4 rounded-full sm:px-6",
                                         message.type === "list"
-                                        ? "rounded-3xl pb-0"
-                                        : ""
+                                        ? "rounded-3xl pb-0 pt-4"
+                                        : "py-4 rounded-full",
+                                        "relative px-4 sm:px-6"
                                     )}
                                 >
                                     {message.content}
