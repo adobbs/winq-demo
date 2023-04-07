@@ -1,7 +1,5 @@
 import JobListItem from "./JobListItem";
 
-//TODO: Move actions to bottom bar - request new list, done, cancel
-
 const jobs = [
     {id: 1, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health", 
         contacts: [{
@@ -26,7 +24,7 @@ const jobs = [
 export default function JobList() {
     return (
         <>
-            <div className="border-b border-neutral-200 bg-white px-4 py-5 sm:px-6">
+            <div className="border-b border-neutral-200 pb-4">
                 <div className="-ml-4 -mt-4 flex flex-wrap items-center justify-between sm:flex-nowrap">
                     <div className="ml-4 mt-4">
                         <h3 className="text-base font-semibold leading-6 text-purple-950">Job List</h3>
@@ -44,7 +42,7 @@ export default function JobList() {
                     </div> */}
                 </div>
             </div>
-            <ul role="list" className="divide-y divide-neutral-200 bg-white">
+            <ul role="list" className="divide-y divide-neutral-200">
                 {jobs.map((job) => (
                     <li key={job.id} className="py-4">
                         <JobListItem jobTitle={job.jobTitle} companyName={job.companyName} contacts={job.contacts} />

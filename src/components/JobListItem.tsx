@@ -13,9 +13,9 @@ interface Jobs {
     contacts: Contact[];
 }
 
-export default function JobListItem({ jobTitle, companyName, contacts }: Jobs) {
+export default function JobListItem({ jobTitle, companyName }: Jobs) {
     return (
-        <div className="px-4 py-1 sm:px-6">
+        <div className="py-1">
             <div className="flex items-center justify-between">
                 <p className="truncate text-sm font-medium text-purple-950">
                     {jobTitle}

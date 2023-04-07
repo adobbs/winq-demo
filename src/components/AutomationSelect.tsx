@@ -5,8 +5,9 @@ import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
 const jobOptions = [
   { id: 1, name: 'Apply with Winq' },
   { id: 2, name: 'Apply manually' },
-  { id: 3, name: 'Remove - not a match' },
-  { id: 4, name: 'Remove - temporarily ignore' },
+  { id: 3, name: 'Find more jobs like this' },
+  { id: 4, name: 'Remove - not a match' },
+  { id: 5, name: 'Snooze - temporarily ignore' },
 ]
 
 function classNames(...classes: string[]) {
