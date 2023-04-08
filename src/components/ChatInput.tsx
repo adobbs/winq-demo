@@ -9,8 +9,8 @@ export default function ChatInput() {
                         id="chat"
                         className="block w-full rounded-none rounded-l-md border-0 py-1.5 pl-3 
                         text-zinc-900 ring-1 ring-inset ring-neutral-300 placeholder:text-purple-400 
-                        focus:ring-2 focus:ring-pink-800 text-sm leading-6"
-                        placeholder="Chat is not functional in this demo"
+                        focus:ring-2 focus:ring-pink-800 sm:text-sm sm:leading-6"
+                        placeholder="Chat is not functional in demo"
                         />
                 </div>
                 <button
