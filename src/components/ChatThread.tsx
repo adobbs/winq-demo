@@ -46,7 +46,7 @@ export default function ChatThread() {
                         {chatMessages.map((message) => (
                             <div key={message.id}
                                 className="flex flex-row gap-2 items-center">
-                                <span key={message.id}
+                                <span
                                 className={classNames(
                                     message.isAuthorUser
                                     ? "hidden"
@@ -56,7 +56,7 @@ export default function ChatThread() {
                                 >
                                     {message.emoji}
                                 </span>
-                                <svg key={message.id}
+                                <svg
                                     className={classNames(
                                         message.isAuthorUser || !message.emoji
                                         ? "hidden"
@@ -66,7 +66,7 @@ export default function ChatThread() {
                                 >
                                     <polygon points="16,0 4,8 16,16" fill="rgb(253 242 248)" />
                                 </svg>
-                                <li key={message.id}
+                                <li
                                     className={classNames(
                                         message.isAuthorUser
                                         ? "bg-neutral-50 w-fit ml-auto"
@@ -82,7 +82,7 @@ export default function ChatThread() {
                                 >
                                     {message.content}
                                 </li>
-                                <svg key={message.id}
+                                <svg
                                     className={classNames(
                                         message.isAuthorUser
                                         ? ""
@@ -92,7 +92,7 @@ export default function ChatThread() {
                                 >
                                     <polygon points="0,0 12,8 0,16" fill="white" />
                                 </svg>
-                                <img key={message.id}
+                                <img
                                 className={classNames(
                                     message.isAuthorUser
                                     ? ""
@@ -106,7 +106,7 @@ export default function ChatThread() {
                         ))}
                     </ul>
                 </div>
-                <div className="sticky bottom-4 mt-auto self-center w-full md:w-4/6 px-2 sm:px-4 md:px-0">
+                <div className="sticky bottom-4 mt-auto self-center w-11/12 md:w-4/6 px-2 sm:px-4 md:px-0">
                     <ChatInput />
                 </div>
             </main>
