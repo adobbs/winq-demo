@@ -1,19 +1,19 @@
 import JobListItem from "./JobListItem";
 
 const jobs = [
-    {id: 1, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health", 
+    {id: 1, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health", matchScore: "96%",
         contacts: [{
             name: "Jamie Anderson",
             imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         }]
     },
-    {id: 2, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health",
+    {id: 2, jobTitle: "Senior Backend Engineer", companyName: "Monument.io", matchScore: "93%",
         contacts: [{
             name: "Jamie Anderson",
             imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
         }]
     },
-    {id: 3, jobTitle: "Staff Backend Engineer", companyName: "Alkero Health",
+    {id: 3, jobTitle: "Staff Software Engineer", companyName: "Divolex", matchScore: "92%",
         contacts: [{
             name: "Jamie Anderson",
             imageUrl: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
@@ -45,7 +45,7 @@ export default function JobList() {
             <ul role="list" className="divide-y divide-neutral-200">
                 {jobs.map((job) => (
                     <li key={job.id} className="py-4">
-                        <JobListItem jobTitle={job.jobTitle} companyName={job.companyName} contacts={job.contacts} />
+                        <JobListItem jobTitle={job.jobTitle} companyName={job.companyName} matchScore={job.matchScore} contacts={job.contacts} />
                     </li>
                 ))}
             </ul>

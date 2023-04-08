@@ -1,3 +1,4 @@
+import { match } from "assert";
 import AutomationSelect from "./AutomationSelect";
 
 // TODO: More info
@@ -10,10 +11,11 @@ interface Contact {
 interface Jobs {
     jobTitle: string;
     companyName: string;
+    matchScore: string;
     contacts: Contact[];
 }
 
-export default function JobListItem({ jobTitle, companyName }: Jobs) {
+export default function JobListItem({ jobTitle, companyName, matchScore }: Jobs) {
     return (
         <div className="py-1">
             <div className="flex items-center justify-between">
@@ -22,7 +24,7 @@ export default function JobListItem({ jobTitle, companyName }: Jobs) {
                 </p>
                 <div className="ml-2 flex flex-shrink-0">
                     <p className="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">
-                        93% match
+                        {`${matchScore} match`}
                     </p>
                 </div>
             </div>
