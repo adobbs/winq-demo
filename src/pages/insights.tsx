@@ -11,7 +11,7 @@ const insightsNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: false },
     { name: 'Insights', href: '/insights', icon: NewspaperIcon, current: true },
     { name: 'Networks', href: '/networks', icon: UsersIcon, current: false },
-    { name: 'Worksheets', href: '/worksheets', icon: RectangleGroupIcon, current: false },
+    { name: 'Workspace', href: '/workspace', icon: RectangleGroupIcon, current: false },
 ];
 
 const Insights: NextPage = () => {

@@ -12,7 +12,7 @@ const conversationsNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: true },
     { name: 'Insights', href: '/insights', icon: NewspaperIcon, current: false },
     { name: 'Networks', href: '/networks', icon: UsersIcon, current: false },
-    { name: 'Worksheets', href: '/worksheets', icon: RectangleGroupIcon, current: false },
+    { name: 'Workspace', href: '/workspace', icon: RectangleGroupIcon, current: false },
 ];
 
 const Conversations: NextPage = () => {
