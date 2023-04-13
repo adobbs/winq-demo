@@ -11,7 +11,7 @@ const trackersNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: false },
     { name: 'Insights', href: '/insights', icon: NewspaperIcon, current: false },
     { name: 'Networks', href: '/networks', icon: UsersIcon, current: false },
-    { name: 'Trackers', href: '/trackers', icon: UsersIcon, current: true },
+    { name: 'Tracker Bots', href: '/trackers', icon: UsersIcon, current: true },
     { name: 'Workspace', href: '/workspace', icon: RectangleGroupIcon, current: false },
 ];
 
