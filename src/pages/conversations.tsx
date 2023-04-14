@@ -2,6 +2,7 @@ import { NextPage } from "next";
 import MainNav from "~/components/MainNav";
 import {
     ChatBubbleLeftRightIcon,
+    GlobeAltIcon,
     NewspaperIcon,
     RectangleGroupIcon,
     UsersIcon,
@@ -12,6 +13,7 @@ const conversationsNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: true },
     { name: 'Insights', href: '/insights', icon: NewspaperIcon, current: false },
     { name: 'Networks', href: '/networks', icon: UsersIcon, current: false },
+    { name: 'Tracker Bots', href: '/trackers', icon: GlobeAltIcon, current: false },
     { name: 'Workspace', href: '/workspace', icon: RectangleGroupIcon, current: false },
 ];
 
