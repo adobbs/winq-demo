@@ -1,24 +1,24 @@
 import { NextPage } from "next";
 import MainNav from "~/components/MainNav";
 import {
+    BriefcaseIcon,
+    BuildingStorefrontIcon,
     ChatBubbleLeftRightIcon,
-    GlobeAltIcon,
-    RectangleGroupIcon,
-    UsersIcon,
+    WrenchIcon,
 } from '@heroicons/react/24/outline'
 import ChatThread from "~/components/ChatThread";
 
 const conversationsNav = [
-    { name: 'Bot Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: true },
-    { name: 'Bot Marketplace', href: '/marketplace', icon: GlobeAltIcon, current: false },
-    { name: 'Bot Workbench', href: '/workbench', icon: RectangleGroupIcon, current: false },
-    { name: 'Network Insights', href: '/network', icon: UsersIcon, current: false },
+    { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: true },
+    { name: 'Bot Builder', href: '/builder', icon: WrenchIcon, current: false },
+    { name: 'Job Tracker', href: '/tracker', icon: BriefcaseIcon, current: false },
+    { name: 'Marketplace', href: '/marketplace', icon: BuildingStorefrontIcon, current: false },
 ];
 
 const Conversations: NextPage = () => {
     return (
         <>
-            <MainNav page="Bot Conversations" navigation={conversationsNav} />
+            <MainNav page="Conversations" navigation={conversationsNav} />
             <ChatThread />
         </>
     );

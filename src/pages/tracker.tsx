@@ -7,22 +7,22 @@ import {
     WrenchIcon,
 } from '@heroicons/react/24/outline'
 
-const marketplaceNav = [
+const trackerNav = [
     { name: 'Conversations', href: '/conversations', icon: ChatBubbleLeftRightIcon, current: false },
     { name: 'Bot Builder', href: '/builder', icon: WrenchIcon, current: false },
-    { name: 'Job Tracker', href: '/tracker', icon: BriefcaseIcon, current: false },
-    { name: 'Marketplace', href: '/marketplace', icon: BuildingStorefrontIcon, current: true },
+    { name: 'Job Tracker', href: '/tracker', icon: BriefcaseIcon, current: true },
+    { name: 'Marketplace', href: '/marketplace', icon: BuildingStorefrontIcon, current: false },
 ];
 
-const Marketplace: NextPage = () => {
+const Tracker: NextPage = () => {
     return (
         <>
-            <MainNav page="Marketplace" navigation={marketplaceNav} />
+            <MainNav page="Job Tracker" navigation={trackerNav} />
             <main className="py-10 lg:pl-72">
-                <div className="px-4 sm:px-6 lg:px-8 text-purple-950">TODO - Marketplace</div>
+                <div className="px-4 sm:px-6 lg:px-8 text-purple-950">TODO - Job Tracker</div>
             </main>
         </>
     );
 };
 
-export default Marketplace;
+export default Tracker;
