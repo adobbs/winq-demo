@@ -6,7 +6,7 @@ import {
     BuildingStorefrontIcon,
     ChatBubbleLeftRightIcon,
     WrenchIcon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/outline';
 import BotBuilder from "~/components/BotBuilder";
 
 const builderNav = [
@@ -23,4 +23,4 @@ export default function Builder() {
             <BotBuilder />
         </>
     );
-};
+}
