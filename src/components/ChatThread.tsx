@@ -27,7 +27,7 @@ const chatMessages = [
     { id: 4, isAuthorUser: true, emoji: null, type: "text", content: "Yes." },
     { id: 5, isAuthorUser: false, emoji: emojiSlightSmile, type: "text", content: `Here is a list of similar jobs. ${emojiPointingDownText} ` },
     { id: 6, isAuthorUser: false, emoji: null, type: "list", content: jobList },
-    { id: 7, isAuthorUser: false, emoji: emojiNerd, type: "text", content: "I've saved this list to your workspace. Want me to reach out now?" },
+    { id: 7, isAuthorUser: false, emoji: emojiNerd, type: "text", content: "I've saved this list to your job tracker. Want me to reach out now?" },
     { id: 8, isAuthorUser: true, emoji: null, type: "text", content: emojiThumbsUp },
     { id: 9, isAuthorUser: false, emoji: emojiCool, type: "text", content: `${emojiPartyText} Great! Anything else?` },
 ];
